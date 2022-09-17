@@ -1,0 +1,44 @@
+0. HTTP (Hyper Text Transfer Protocol)
+    1) 
+
+1. 서블릿 요청과 응답 API
+    1) HttpServletRequest
+        - 요청과 관련된 클래스
+    2) HttpServletResponse 
+        - 응답과 관련된 클래스
+
+2. HttpServletRequest의 <form>태그로 전송된 데이터를 받아오는 메서드
+    1) String getParameter(String name)
+        - name 값을 알고 있을 때, name에 대한 전송된 값을 받아오는 데 사용
+    2) Enumeration getParameterNames()
+        - name 값을 모를 때 사용
+    3) String[] getParameterValues(String name)
+        - 같은 name에 대해 여러개의 값을 얻을 때 사용
+        - 전송되는 데이터가 많은 경우 name 값을 일일이 기억할 필요없이
+          이용해서 name을 얻음
+
+3. 서블릿의 응답 처리
+    1) doGet()이나 doPost() 메서드 안에서 처리
+    2) HttpServletResponse 객체를 이용
+    3) 클라이언트에게 전송할 데이터 종류(MIME-TYPE)를 지정함
+        - 미리 지정해 놓은 데이터 종류로 서블릿에서 브라우저로 전송 시 설정해 사용
+            - HTML로 전송 시: text/html
+            - 일반 텍스트로 전송 시: text/plain
+
+4. 웹 브라우저에서 서블릿으로 데이터 전송 방식
+    1)      GET 방식                                        POST 방식
+    ----------------------------------------------------------------------------------
+        - 서블릿에 데이터를 전송할 때                       - 데이터를 요청 메시지의 
+          데이터가 URL 뒤에 name=value 형태로 전송            body에 담아 전송
+        - 여러개의 데이터를 전송할 때는 '&'로                - 보안에 유리 (암호화, HTTP)
+          구분해서 전송됨                                   - 전송 데이터 용량 무제한 (대용량)
+        - URL 데이터 노출로 보안이 취약함                    - 처리 속도가 GET 방식보다 느림
+        - 최대 255자까지 전송 가능                          - 서블릿에서는 doPost()를 이용해
+        - 기본 전송 방식, 사용이 쉬움                          데이터를 처리함
+        - 서블릿에서는 doGet()으로 전송된
+          데이터를 처리
+
+        - 서버의 리소스를 가져오기 위해 설계                  - 서버에 데이터를 올리기 위해 설계됨
+        - Query String을 통해 데이터를 전달 (소용량)          - 데이터 공유에는 불리
+        - 데이터 공유에 유리
+            ex) 검색엔진에서 검색단어 전송에 이용                   ex) 게시판 글쓰기, 로그인, 회원가입

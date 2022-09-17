@@ -1,0 +1,97 @@
+1. Thread의 이해
+
+    Process: 실행중인 프로그램
+    운영체제(OS)
+    하드웨어(CPU,RAM)
+
+    1) Process
+        - 프로그램이 실행되면 OS로부터 메모리를 할당받아 프로세스 상태가 됨
+        - 프로세스는 자신만의 자원을 가짐
+            - 여러 프로세스가 동시에 실행되더라도 자신만의 메모리를 사용 -> 서로 독립적
+    2) Thread
+        - 하나의 프로세스는 하나 이상의 Thread를 가지게 되고
+          실제 작업(task)을 수행하는 단위는 Thread임
+    3) 멀티태스킹(Multi-tasking)
+        - 두가지 이상의 작업(task)을 동시에 처리하는 것
+
+2. 스레드 생성과 실행
+    1) Thread 클래스 상속받아 만들기
+        - run() 메서드 오버라이딩
+    2) Runnable 인터페이스 구현하기
+    3) 익명 클래스 구현
+    4) 람다식 구현
+
+3. Multi- Threading (여러 개의 스레드 동시 실행)
+    1) 여러 Thread가 동시에 수행되는 프로그래밍
+       여러 작업(task)이 동시에 실행되는 효과
+    2) Thread는 각각 자신만의 작업 공간을 가짐 (context)
+    3) 각 Thread 사이에는 공유하는 자원이 있을 수 있음 (자바에서 static)
+    4) 여러 Thread가 자원을 고유하여 작업이 수행되는 경우
+       서로 자원을 차지하려는 race condition이 발생할 수 있음
+    5) 이렇게 여러 Thread가 공유하는 자원 중 경쟁이 발생하는 부분을 critical section이라고 함
+    6) critical section에 대한 동기화(일종의 순차적 수행)를 구현하지 않으면 오류가 발생할 수 있음
+
+4. Thread 우선순위
+    1) Thread,MIN_PRIORITY(=1) ~ Thread.MAX_PRIORITY(=10)
+    2) 디폴트 우선 순위: Thread.NORM_PRIORITY(=5)
+    3) 우선순위가 높은 Thread가 CPU의 배분을 받을 확률이 높음
+    4) setPriority()/getPriority 
+
+5. Thread status
+    1) Runnable
+    2) Run
+    3) Not Runnable
+    4) Dead
+
+6. join()
+    1) 동시에 두 개 이상의 Thread가 실행될 때
+       Thread의 결과를 참조하여 실행해야 경우 => join()함수를 사용
+    2) join() 함수를 호출한 Thread가 not Runnable 상태가 감
+    3) 다른 Thread의 수행이 끝나면 Runnable 상태로 돌아옴
+
+7. Thread 종료하기
+    1) Thread를 종료할 떄 사용
+    2) 무한 반복의 경우 while(flag)의 flag 변수 값을 false로 바꾸어 종료 시킴
+
+8. 스레드 동기화
+    1) 배경
+        동일한 변수의 값을 증감시키는 두 스레드가 있다고 가정
+        변수의 값 메모리에 있음
+        이 변수의 값을 증감 연산 하려면 CPU로 값을 옮겨와서 값을 증감시키는 연산 수행
+        다시 메모리에 저장시킴
+    2) critical section (semaphore)
+        - 두 개 이상의 thread가 동시에 접근하는 경우 문제가 생길 수 있기 때문에
+          동시에 접근할 수 없는 영역
+        - semaphore: 특별한 형태의 시스템 객체. get(), release() 두개의 기능 제공
+        - 한 순간 오직 하나의 thread만이 semaphore 얻을 수 있고
+          나머지 thread들은 대기(blocking) 상태가 됨
+        -semaphore를 얻은 thread만이 critical section에 들어갈 수 있음
+    3) 동기화 (syncronization)
+        - 두 개의 thread가 같은 객체에 접근할 경우, 동시에 접근함으로써 오류 발생
+        - 동기화는 임계영역에 접근한 경우 공유자원을 lock하여 다른 thread의 접근을 제어
+        - 동기화는 잘못 구현하면 deadlock에 빠질 수 있음
+    4) 자바에서는 syncronized 메서드나 syncronized 블럭을 사용
+        - syncronized 메서드
+            - 객체의 메소드에 syncronized 키워드 사용
+            - 현재 이 메서드가 속해있는 객체에 lock을 검
+    
+9. 스레드 풀
+    1) 배경
+        - 스레드 개수가 많아지면 스레드 객체 생성과 소멸, 스케줄링 등에 CPU와 메모리에
+          많은 부하 발생
+        - 웹 서버처럼 소규모의 많은 요청이 들어올 때마다 스레드 생성 및 종료하면
+          오버헤드 발생 (OutOfmemoryError)
+        - 생성과 종료를 반복해 사용하는 스레드를 재사용하고 동시에 실행하는 개수도 제한하여
+          CPU, 메모리에 가해진는 부하를 줄일 필요가 있음
+    2) 스레드 풀
+        - 제한된 개수의 스레드를 JVM에 관리하도록 맡기는 방식
+        - 실행할 작업(task)을 스레드 풀로 전달하면
+          JVM이 스레드 풀의 idle thread(유효 스레드) 중 하나를 선택해서 스레드로 실행시킴
+        - 유형
+            - newSingleThreadExecutor
+                - 풀 안에 하나의 스레드만 생성하고 유지
+                - 하나의 task가 완료된 이후 다음 task가 실행됨
+                - 여러 스레드가 동시에 실행되지 않음 => 동기화가 없음
+            - newFixedThreadPool
+                - 풀 안에 인수로 전달된 수의 스레드를 생성하고 유지
+                - 만약 생성된 스레드가 idle 상태에 있어도 스레드를 제거하지 않고 내버려둠

@@ -1,0 +1,82 @@
+1. AOP 개요와 용어
+    1) 핵심기능과 부가기능
+        - 업무(Biz) 로직을 포함하는 기능 : 핵심 기능(Core Concerns)
+        - 핵심기능을 도와주는 부가적인 기능(로깅, 보안 등) : 부가 기능(Cross-cutting Concern)
+
+    2) AOP (Aspect Oriented Programming)
+        - 애플리케이션에서 관심사의 분리 (기능의 분리)
+          즉, 핵심기능에서 부가적인 기능을 분리
+        - 분리한 부가기능을 Aspect라는 모듈형태로 만들어 설계, 개발하는 방법
+
+        - AOP는 부가기능을 Aspect로 정의하여
+          핵심기능에서 부가기능을 분리
+        - 관점 지향 프로그래밍(AOP)을 이용해 주기능과 보조기능을 분리해서
+          매서드에 적용
+
+2. AOP 용어
+    1) Aspect
+        - 부가기능을 정의한 코드인 Advice +
+          Advice를 어디에 적용할지 결정하는 PointCut을 합친 개념
+        - Aspect = Advice + PointCut
+    2) Target
+        - 핵심기능을 담고 있는 모듈
+        - 타겟은 부가기능을 부여할 대상이 됨
+    3) Advice
+        - (타겟에 제공할) 부가기능을 담고 있는 모듈
+    4) PointCut
+        - Advice를 적용할 타겟의 메서드를 선별하는 정규 표현식
+        - 포인트컷 표현식은 execution으로 시작
+    5) 위빙 (Weaving)
+		- 포인트컷에 의해 결정된 타겟의 조인 포인트에 부가기능(어드바이스)을
+		  삽입하는 과정
+		- 핵심기능(타겟)의 코드에 영향을 주지 않으면서
+		  필요한 부가기능(어드바이스)을 추가할 수 있도록 해주는 처리과정
+    6) 조인 포인트(Join Point)
+		- 어드바이스가 적용될 수 있는 위치
+		- 타겟 객체가 구현한 인터페이스의 모든 메서드는 조인포인트가 됨
+    
+3. AOP 기능을 구현하는 방법
+    1) 제공하는 API를 이용
+    2) @Aspect 애너테이션 이용
+		- 부가기능 제공하는 Aspect 클래스 작성
+		- Aspect 클래스는 어드바이스를 구현하는 메서드와 포인트컷 포함
+		- XML 설정 파일에 <aop:aspectj-autoproxy />를 설정
+
+4. Spring AOP 특징
+	1) Spring은 타겟 객체에 대한 프록시를 만들어 제공
+	2) 타겟을 감싸는 프록시는 실행시간(Runtime)에 생성됨
+	3) 프록시는 어드바이스를 타겟 객체에 적용하면서 생성되는 객체
+	4) 프록시가 호출을 가로챔 (Intercept)
+		- 전처리 어드바이스
+		- 후처리 어드바이스
+	5) Spring AOP는 메서드 조인 포인트만 지원
+
+5. 포인트컷 관련 용어
+	1) 지시자 (execution, within, bean)
+		- execution
+	
+	2) 어드바이스 동작 시점
+		- Before 어드바이스
+			- 타겟의 메서드가 실행되기 이전 시점에 처리해야할 필요가 있는 부가기능 정의
+		- JoinPoint 앞에서 실행되는 Advice
+		- After
+		- After-returning
+		- After-throwing
+		- Around 어드바이스
+			- 타겟의 메서드가 실행되기 이전, 이후 시점에 
+			  모두 처리해야할 필요가 있는 부가기능 정의
+			- JoinPoint 앞에서 실행되는 Advice
+
+6. JoinPoint 인터페이스
+	1) Aspect에서 AOP가 적용되는 지점
+	2) getArgs() : 메서드 아규먼트를 반환
+	   toString() : 어드바이스 
+	   getSignature() : 어드바이스 되는 메서드의 설명 출력
+	3) Around 어드바이스는 ProceedingJoinPoint 타입의 파라미터를 필수적으로 선언
+
+7. PointCut 표현식
+	1) AspectJ 포인트컷 표현식은 포인트컷 지시자를 이용하여 작성
+	2) 포인트컷 지시자 중에서 가장 대표적으로 사용되는 것은 execution()
+	3) 문법 구조
+		
+		execution([접근제한자] 타입패턴 이름패턴(타입패턴) [throws 예외패턴])

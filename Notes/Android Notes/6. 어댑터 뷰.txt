@@ -1,0 +1,60 @@
+1. 어댑터 뷰 클래스
+    1) 화면에 표시된 수많은 항목을 손으로 쓸어 넘기면서 봄
+
+2.                  View
+                      |
+                    ViewGroup
+                      |
+                    AdaoterView
+                      |
+    -------------------------------
+    |         |         |         |       
+  ListView  GridView   Spinner   Gallery
+
+3. Adapter
+    1) 어댑터 뷰에 데이터를 공급하는 클래스
+    2) 개념적으로 데이터 소스와 어댑터 뷰 중간에 위치해
+       데이터 소스에서 데이터를 읽어와 어댑터 뷰에 공급
+    3) ArrayAdapter
+        - 배열에서 데이터를 가져오는 어댑터
+    4) SimpleCursorAdapter
+        - 데이터베이스에서 데이터를 가져오는 어댑터
+
+4. ListView
+    1) 항목들을 수직으로 보여주는 어댑터 뷰로써 상하 스크롤 가능
+    2) 문제점
+        - 리스트 항목이 변경될 때마다
+          매번 항목을 보여주는 뷰를 새로 생성해야 함
+        - 만약 데이터 집합 크기가 큰 경우 성능 저하 발생
+    3) ListView의 개선뷰 : RecycleView
+
+5. RecycleView
+    1) 항목을 표시하기 위해 생성한 뷰를 재활용
+    2) 뷰홀더(ViewHolder) 패턴 사용
+        - 뷰홀더 클래스를 정의해야 함 (뷰를 가지고 있음)
+        - View Holders (UI에서 뷰 요소들을 채움)
+
+          Adapter (뷰 홀더에 데이터를 연결)
+
+          
+        Data Set (뷰홀더)
+    3) 뷰들을 재활용하기 때문에 빠르게 실행됨
+    4) 2가지 배치 관리자 가능
+        - LinearLayoutManager
+        - GridLayoutManager
+    5) ViewHolder 클래스
+        - 리스트 항목의 레이아웃을 포함하는 View의 래퍼클래스
+        - RecycleView.ViewHolder 상속받아 정의
+    
+    6) Adapter 클래스
+        - RecycleView.Adapter를 상속받음
+        - getItemCount() : 아이템 개수 반환
+        - onBindViewHolder() : 뷰에 데이터를 연결 (바인딩)
+        - onCreateViewHolder() : 항목을 보여주는 뷰가 들어있는 ViewHolder를 반환
+    
+    7) RecycleView 구현 단계
+        - 표준 레이아웃 관리자 중 하나 사용
+        - 리스트에 있는 각 항목의 모양과 동작 방식 설계
+            - ViewHolder 클래스 작성
+        - Adapter 정의
+            - 데이터와 ViewHolder를 연결

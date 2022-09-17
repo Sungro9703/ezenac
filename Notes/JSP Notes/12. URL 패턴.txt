@@ -1,0 +1,17 @@
+1. URL 패턴
+    1) 서블릿 매핑 시 사용되는 가상의 이름
+    2) 클라이언트가 브라우저에서 요청할 때 사용되면 반드시 슬래시(/)로 시작되어야함
+    3) exact mapping(이름까지 일치)                (매칭 URL)
+        /login/login.do                     http://localhost/chap09/login/login.do
+    
+
+        path mapping(디렉터리까지 일치)
+        /login/ *                           http://localhost/chap09/login/
+                                            http://localhost/chap09/login/login
+                                            http://localhost/chap09/login/login.do
+                                            http://localhost/chap09/login/order/
+
+        extention mapping (확장자만 일치)
+        *.do                                http://localhost/chap09/login.do
+                                            http://localhost/chap09/order.do
+                                            http://localhost/chap09/login/logout.do

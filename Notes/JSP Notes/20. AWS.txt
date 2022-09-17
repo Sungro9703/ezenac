@@ -1,0 +1,73 @@
+1. AWS (Amazon Web Service)
+    0) 아마존 웹 서비스
+    1) 클라우드 인프라 및 서비스 제공
+    2) aws 계정 생성
+
+2. 클라우드 서비스
+    1) SaaS (Software-as-a-Service)
+    2) PaaS (Platform-as-a-Service)
+    3) IaaS (Infrastructure-as-a-Service)
+
+3. AWS 가상환경 구축
+    1) EC2 생성
+    
+4. 리눅스 쉘과 CLI 명령어
+    1) 기본 명령어
+        - 파일 다루기
+            - clear
+                - 화면 지우기
+            - 파일 보기
+                - ls, ls -l, ls -al
+                - 파일 목록 보기 (ls = list)
+                - ls        : list
+                - ls -l     : long list
+                - ls -a     : all
+                - ls -al    : all + long
+                - ls -a -l  : all + long
+                - ls *.txt  : 확장자가 *.txt 파일인것
+
+            - 파일 만들기
+                - touch
+                    - 파일을 툭 건드리기
+                        - 현재 시간(timestamp)으로 바꾸기
+                        - 해당 파일이 존재하지 않는 경우 0바이트 파일 생성
+                    - touch .hello.txt
+                        - 히든 파일 만들기 (맨앞의 점)
+                        - hello.txt와 다른 파일
+            
+            - 파일 내용 보기
+                - cat (= concatenate)
+                    - input과 output을 연결하기
+                - cat -e /etc/passwd    : 줄의 맨 뒤에 $ 붙이기 (히든 캐릭터 공백 등 확인)
+                - cat -n /etc/passwd    : 줄 번호 보여주기
+
+
+                - more
+                    - 페이지 단위로 이동 - space
+                    - 줄단위로 이동 - enter
+                
+                - less
+                    - 페이지 단위로 이동 - space
+                    - 줄단위로 이동 - enter
+                    - 방향키 - 상하좌우, 페이지up/down
+                    - more보다 향상된 기능 (속도 빠름)
+
+                - 파일 삭제
+                    - rm (remove)
+
+            - 디렉토리 생성
+                - mkdir (= make directory)
+            
+            - 디렉토리 삭제
+                - rmdir (= remove directory)
+                - rm -r     
+
+            - cd (=change directory)
+                - 디렉토리 구조
+                    . (나 자신)
+                    .. (부모 디렉토리)
+                    ~ (홈 디렉토리)
+                    - (이전 디렉토리)
+        
+        - 파일 복사/이동
+            - cp (=copy)

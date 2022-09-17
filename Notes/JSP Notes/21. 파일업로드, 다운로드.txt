@@ -1,0 +1,33 @@
+1. 파일 업로드 
+    1) 화면(form) 작성
+    2) 데이터베이스 테이블 준비
+    3) DTO, DAo 작성
+    4) 파일 업로드
+
+2. 화면(form) 작성
+    1) method 속성은 반드시 post로,
+       enctype 속성은 multipart/form-data로 지정
+    
+        - enctype
+            - 폼값을 서버로 전송할 때 인코딩 방식 지정 속성
+            - 속성값
+                - application/x-www-form-urlencoded
+                    - 기본값. 모든 문자를 서버로 전송하기 전에 인코딩
+                - multipart/form-data
+                    - 모든 문자를 인코딩 하지 않음
+                    - <form> 태그를 통해 파일을 서버로 전송할 때 주로 사용
+                - text/plain
+                    -공백문자(space)만 "+"기호로 변환하고 나머지 문자는 인코딩하지 않음
+
+3. 파일 업로드 및 폼값 처리
+    1) MultipartRequest 클래스
+        - 4가지 설정 값
+            - public MultipartRequest(HttpServletRequest request,       //내장객체
+                                      String saveDriectory,             //파일이 저장될 디렉토리 경로
+                                      int maxPostSize,                  //업로드할 파일의 최대 용량
+                                      String encoding)                  //인코딩 방식
+            - 객체를 생성과 동시에 파일이 업로드되어 서버에 저장
+
+    2) 파일 목록 보기
+    3) 파일 다운로드
+    

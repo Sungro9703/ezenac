@@ -1,0 +1,60 @@
+1. @SpringBootApplication
+    1) 스프링부트 애플리케이션의 시작
+    2) 스프링부트용 @Configuration
+    3) @EnableAutoConfiguration
+        - 사전에 정의한 라이브러리 빈을 등록
+    4) @ComponentScan
+        - 각종 스프링 빈 애노테이션을 베이스 패키지에서부터 스캔하여
+          스프링 빈으로 스프링 IoC 컨테이너에 등록
+    5) 스프링의 마스터
+
+2. SpringApplication 인스턴스를 만들어 run() 전에 각종 설정 가능
+
+3. 프로젝트 고드 구조
+    1) 메인 애플리케이션 클래스는 루트 패키지에 놓는 것을 권장
+
+4. WEB
+    1) 세계적인 정보공간
+        - 정보(자원, 리소스)를 공유
+    2) HTTP
+        - GET
+        - POST
+        - PUT
+        - DELETE
+    3) URI (Uniform Resource Identifier)
+        - 리소스 식별자
+            - 특정 사이트
+            - 특정 쇼핑 목록
+            - 동영상 목록
+    4) HTML
+        - 사용자가 알아보기 쉬운 형태롤 표현
+
+5. REST (REprentational State Transfer : 자원의 상태 전달)
+    1) Client, Server
+        - 클라이언트와 서버가 서로 독립적으로 분리되어야 함
+
+    2) Stateless
+        - 요청에 대해 클라이언트의 상태를 서버에 저장하지 않음
+    
+    3) Cache
+        - 클라이언트는 서버의 응답을 Cache(임시저장)할 수 있어야 함
+    
+    4) 계층화 (Layered System)
+        - 클라이언트와 서버 사이에 방화벽, Proxy, 게이트웨이 등 계층 형태 구성이 가능해야함
+    
+    5) 인터페이스 일관성
+        - 인터페이스의 일관성을 지키고, 클라이언트, 서버가 독립적으로 개선될 수 있어야 함
+        
+            - 자원의 식별
+                - 웹 기반의 REST에서는 리소스 접근할 때 URI를 사용
+                    - ex) http://ezenac.co.kr/user/100
+                    - Resource : user
+                    - 식별자 : 100
+
+            - 메시지를 통한 리소스 조작
+                - 웹에서는 다양한 방식으로 데이터를 전달할 수 있음
+                    - 가장 많이 사용하는 방식 : HTML, XML, JSON, TEXT 등
+                - 어떠한 타입의 데이터인지 알려주기 위해 HTTP Header 부분에
+                  Content-Type을 통해 테이터의 타입이 지정해 줄 수 있음
+
+

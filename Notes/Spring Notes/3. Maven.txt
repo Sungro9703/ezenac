@@ -1,0 +1,26 @@
+1. Maven이란?
+    0) 프로젝트 구조와 내용을 기술한는 선언적 접근 방식의 오픈 소스 빌트 툴
+    1) 프로젝트 종속 라이브러리들과 그 라이브러리에 의존하는 Dependency 자원까지 관리 가능
+        - 편리한 Dependency 관리
+        - 여러 프로젝트에서 프로젝트 정보나 jar 파일들을 공유하기 쉬움
+        - pom.xml 파일 수정
+    2) 프로젝트 전반의 리소스 관리와 설정 파일 그리고 이와 관련된 표준 디렉토리 구조를
+       처음부터 일관된 형태로 구성하여 관리 가능
+        - 모든 프로젝트의 빌드 프로세스를 일관되게 가져갈 수 있음
+
+2. Maven 프로젝트 구성 요소
+    1) pom.xml
+        - Maven 프로젝트를 생성하면 pom.xml 파일 생성됨ㅁ
+        - Project Object Model 정보를 담고 있음
+        - 의존 관계(Dependency)추가
+            - http://mvnrepository.com/ 검색
+    2) src/main/java
+        - 자바 소스 파일 위치
+    3) src/main/resources
+        - 프로퍼티 파일이나 xml파일 등 리소스 파일 위치
+    4) src/test/java
+        - JUit 등 테스트 파일 위치
+    5) src/test/resources
+        - 테스트 시 필요한 resource 파일 위치
+    6) src/main/webapp
+        - WEB-INF 등 웹 애플리케이션 리소스 위치

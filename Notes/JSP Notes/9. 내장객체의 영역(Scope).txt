@@ -1,0 +1,51 @@
+1. 내장 객체의 영역
+    1) 각 객체가 저장되는 메모리의 유효기간
+    2) JSP와 같은 웹 애플리케이션은 페이지 단위로 구성
+        - A 페이지에서 선언한 변수를 B 페이지로 이동한 후에도 접근 여부 다름
+    3) 총 4가지
+        - page 영역
+            - 동일한 페이지에서만 공유, 페이지를 벗어나면 소멸
+            - pageContext 객체 사용
+        - request 영역
+            - 하나의 요청에 의해 호출된 페이지와 포워드(요청 전달)된 페이지까지 공유
+            - request 객체 사용
+        - session 영역
+            - 클라이언트가 처음 접속한 후 웹 브라우저를 닫을 때까지 공유
+            - session 객체
+        - application 영역
+            - 한번 저장되면 웹 애플리케이션이 종료될 때까지 유지
+            - application 객체 사용
+    4) 주요 메서드 
+        - void setAttribute(String name, Object value)
+            - 각 영역에 속성을 저장
+        - Object  getAttribute(String name)
+            - 영역에 저장된 속성값 얻어옴
+        - void removeAttribute(String name)
+            - 영역에 저장된 속성 삭제
+
+2. page 영역
+    1) 기본적으로 클라이언트 요청을 처리하는데 관여하는 JSP 페이지마다 하나씩 생성
+    2) 각 JSP 페이지는 page 영역을 사용하기 위한 pageContext 객체를 할당받게 됨
+    3) page 영역에 속성 저장
+            - pageContext.setAttribute(속성명, 값);
+       page 영역에 속성 읽기
+            - pageContext.getAttribute(속성명);
+    4) pageContext 객체에 저장된 정보는 해당 페이지에서만 사용 가능,
+       페이지를 벗어나면 소멸
+    5) include 지시어로 포함된 파일은 같은 페이지이므로 page 영역이 공유됨
+    6) 링크를 통해 다른 페이지로 이동하면 page 영역에 저장된 데이터는 소멸
+
+3. request 영역
+    1) 클라이언트가 요청할 때마다 새로은 request 객체가 생성
+    2) request 영역은 같은 요청을 처리하는 데 사용되는 모든 JSP가 공유
+        - request 영역에 저장된 정보는 현재 페이지와 포워드된 페이지까지 공유
+        - 페이지 이동 시에는 소멸되어 사용할 수 없음
+    3) 하나의 요청에 대한 응답이 완료될 때 소멸
+
+4. session 영역
+    1) 클라이언트가 웹 브라우저를 최초로 열고 난 후 단을 때까지 요청되는 모든 페이지는 
+       session 객체를 공유할 수 있음
+    2) 클라이언트가 서버에 접속해 있는 상태 혹은 단위
+    3) 웹 서버를 시작할 때 만들어지며, 웹 서버를 종료할 때 삭제됨
+        - application 영역에 한번 저장된 정보는 페이지를 이동하거나,
+          

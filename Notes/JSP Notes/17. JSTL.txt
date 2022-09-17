@@ -1,0 +1,51 @@
+4. 국제화(Formatting) 태그
+    1) 국가별 다양한 언어, 날짜, 시간, 숫자 형식을 설정할 때 사용
+    2) 태그 종류
+        - 숫자 포맷, 날짜 포맷, 타임존 설정, 로케일 설정
+
+    3) 숫자 포맷
+        - 태그 형식
+            <fmt:formatNumber value="출력할 숫자"
+                              type="출력 양식(percent, currency, number)"
+                              var="출력할 숫자를 변수에 저장"
+                              groupingUsed="세자리마다 콤마 출력 여부"
+                              pattern="출력할 숫자 양식" />
+    4) 날짜, 시간 포맷
+        - 태그 형식
+            <fmt:formatDate value="출력할 날짜"
+                            type="출력 양식"
+                            dateStyle="날짜 스타일"
+                            timeStyle="시간 스타일"
+                            var="변수 설정"
+                            scope="영역"
+                            pattern="날짜 패턴"/>
+
+        - 태그 속성
+            - type: 날짜(date), 시간(time), 날짜 및 시간(both)
+            - dateStyle: default, short, medium, long, full 중 선택
+            - timeStyle; default, short, medium, long, full 중 선택
+
+    5) 타임 존
+        - <fmt:timeZone></fmt:timeZone>
+    
+    6) 로케일
+        - <fmt:setLocale value=""/>
+
+5. XML 태그
+    1) XML 문서를 처리하기 위한 것
+        - eXtensible Markup Language
+            - 태그를 개발자가 직접 정의할 수 있고 데이터를 기술할 수 있는 언어
+            - 데이터 전달 역할
+    2) XML 태그 종류
+        - parse
+            - XML을 파싱할 때 사용
+        - out
+            - select 속성에 지정한 XPath 표현식의 결과를 출력
+        - forEach
+            - select 속성에 지정한 반복되는 노드를 파싱(구문 분석)
+        - choose
+            - select 속성에 지정한 XPath 표현식의 값을 다중 조건으로 결정
+            - 하위에 when, otherwise 태그 사용
+    3) XPath
+        - XML 문서의 요소에 접근하기 위해 사용
+        - XML 문서의 노드를 식별하고 탐색하는 역할

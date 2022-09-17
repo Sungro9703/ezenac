@@ -1,0 +1,28 @@
+1. swich - case 문
+    1) if ~ else if ~ else 문을 가독성 좋게 구현
+    2) 비교조건이 특정 값이나 문자열인 경우 사용
+    3) break 문을 사용하여 각 조건이 만족되면 switch 블록을 빠져나오도록 함
+    4) 형식
+        switch(조건식)  {
+            case 1: 
+                처리 1
+                break;
+            case 2:
+                처리 2
+                break;
+                ..
+                ..
+            default;
+                처리 n
+        }
+    5) 조건식
+        - int 범위 이하의 정수
+        - String 값
+    6) 조건식의 결과와 일치하는 case문으로 이동 후,
+       break문을 만날때 까지 실행함.
+       - break문이 없으면 switch문을 벗어나지 않고 계속 실행됨.
+
+2. Java14부터 지원되는 Switch 문 기능
+    1) 간단하게 쉼표(,)로 조건 구분
+    2) 반환값을 받을 수 있음.
+    3) yield 키워드 사용

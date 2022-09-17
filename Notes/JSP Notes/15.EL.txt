@@ -1,0 +1,80 @@
+1. 표현 언어 (EL: Expression Language) 소개
+    1) 변수의 값을 표현식(<%= %>)보다 편하게 출력가능
+        ${속성 or 표현식}
+    2) JSP의 기본 문법을 보완
+    3) 4가지 영역에 저장된 속성 더 쉽게 읽을 수 있음
+    4) 모델 2 방식으로 웹 애플리케이션을 개발할 때 주로 사용
+    5) 산술, 비교, 논리 연산이 가능
+        - 산술 연산자
+            - +, -, *
+            - / 또는 div
+            - % 또는 mod
+        - 비교 연산자
+            - > 또는 gt
+            - >= 또는 ge
+            - < 또는 lt
+            - <= 또는 le
+            - == 또는 eq
+            - != 또는 ne
+        - 논리 연산자
+            - && 또는 and
+            - || 또는 or
+            -! 또는 not
+        - empty 연산자
+            - 값이 없을 때 true 반환
+                - null
+                - 빈 문자열
+                - 길이가 0인 배열
+                - size가 0인 컬렉션
+        - 삼항 연산자
+            - ${조건 ? "true일 때 선택" : "false일 때 선택"}
+        
+
+    6) 메서드 호출
+    7) HTML 태그나 자바스크립트, CSS 어디에서든 사용가능
+
+2. EL의 내장 객체
+    1) pageScope
+        - pageContext 내장 객체와 같이 page 영역에 저장된 속성값을 읽어옴
+    2) requestScope
+        - request 내장 객체와 같이 request 영역에 저장된 속성값을 읽어옴
+    3) sessionScope
+        - session 내장 객체와 같이 session 영역에 저장된 속성값을 읽어옴
+    4) applicationScope
+        - application 내장 객체와 같이 application 영역에 저장된 속성값을 읽어옴
+    
+3. 폼값 처리하기 (요청 매개변수)
+    1) jsp에서는 전송방식(get/post)에 상관없이 request.getParameter()로 폼값을 받음
+    2) 폼값 처리를 위한 내장 객체
+        - param
+            - request.getParameter("매개변수명")와 동일
+        - paramValues
+            - request.getParameterValues("매개변수명")와 동일
+
+4. 객체 전달하기
+    1) 폼으로는 객체 전송 불가
+    2) 영역(Scope)을 사용해서 객체 전송 가능
+        - 객체를 영역에 저장한 후 → 내장 객체의 영역이 공유됨 → 전송하고자 하는 페이지 전달
+
+5. 쿠키, HTTP 헤더, 컨텍스트 초기화 매개변수 출력하기
+    1) cookie: 쿠키를 읽을 때 사용
+    2) header: 헤더값 읽을 때 사용
+       headerValues: 헤더값을 배열 형태로 읽을 때 사용
+    3) initParam: web.xml에 설정된 컨텍스트 초기화 매개변수 읽을 때 사용
+    4) pageContext: JSP의 pageContext 내장 객체와 동일 역할
+
+6. 빈 사용
+    1) 빈 속성 접근 방법
+        - ${빈이름.속성이름}
+
+7.  Collection 객체 사용
+    1) 접근 형식 
+        - ${collection객체이름[index.속성이름]}
+        - ${hashMap객체이름.키이름}
+
+8. has-a 관계 빈 사용
+    1) 접근 형식
+        - ${부모빈이름.자식속성이름.속성이름}
+
+9. 인스턴스 메서드 호출
+    정적 메서드 호출
