@@ -1,0 +1,8 @@
+BranchProjectTracker__C\:\\Users\\\uC774\uC131\uB85C\\git\\repository\\.git_dev_login=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<projects>\r\n<project>\\HelloGit</project>\r\n</projects>
+BranchProjectTracker__C\:\\Users\\\uC774\uC131\uB85C\\git\\repository\\.git_ezen=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<projects>\r\n<project>\\HelloGit</project>\r\n</projects>
+BranchProjectTracker__C\:\\Users\\\uC774\uC131\uB85C\\git\\repository\\.git_main=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<projects>\r\n<project>\\HelloGit</project>\r\n</projects>
+commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<messages>\r\n<message>add Test</message>\r\n<message>first commit</message>\r\n<message>edit .gitignore</message>\r\n<message>cancle</message>\r\n<message>Merge branch &apos;dev_login&apos; into main&\#x0A;&\#x0A;Conflicts\:&\#x0A;&\#x09;HelloGit/src/kr/co/ezenac/git/HelloGit.java&\#x0A;</message>\r\n<message>Merge branch &apos;ezen&apos; into main&\#x0A;&\#x0A;Conflicts\:&\#x0A;&\#x09;HelloGit/src/kr/co/ezenac/git/HelloGit.java&\#x0A;</message>\r\n<message>Create Hello Git</message>\r\n<message>add answer</message>\r\n<message>What&apos;s Git?</message>\r\n<message>create HelloGit</message>\r\n</messages>
+eclipse.preferences.version=1
+repositories_view_filters=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<FilterCache/>
+resourcehistory_graph_split=500,500
+resourcehistory_rev_split=700,300

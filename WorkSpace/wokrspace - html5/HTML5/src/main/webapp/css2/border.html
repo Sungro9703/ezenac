@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- 
+	width: 요소의 가로 너비
+	height: 요소의 세로 너비
+	
+	단위 : px - 픽셀
+		  em - 요소의 글꼴 크기
+		  rem - root 요소(html)의 글꼴 크기
+		  vw - 뷰포트 가로 너비의 백분율
+		  vh - 뷰포트 세로 너비의 백분율
+		  % - 상대적 백분율
+ -->
+ <!-- 
+	border: 요소의 테두리 선을 지정하는 단축 속성 
+	 		선-두께(border-width), 선-종류(border-style), 선-색상(border-color)
+	 		
+	요소 테두리 선의 두께 
+	border-width : top right bottom left		(값 1개)
+	border-width : top bottom / right left		(값 2개)
+	border-width : top / right left / bottom	(값 3개)
+	border-width : top / right / bottom / left	(값 4개)
+	
+	요소 테두리 선의 종류
+	border-style : none (선없음)
+				   solid (실선)
+				   dashed (파선)
+	
+	요소 테두리 선의 색상을 지정하는 단축 속성
+	border-color / 색상표현 : 색상 이름
+				   Hex 색상코드 (16진수 색상)		ex) #000, #FFFFF
+				   RGB (빛의 3원색) 			ex) RGB(255,255,255)
+				   RGBA (빛의 3원색 + 투명도)	ex) RGBA(0,0,0,05)
+  -->			
+ 
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>박스모델</title>
+	<style type="text/css">
+		div {
+			width: 200px;
+			height: 100px;
+			display: inline-block;
+			margin: 15px;
+			border-width: 5px;
+		}
+		.box1 { /* border-style: solid; */
+				border: medium solid blue;
+		}
+		.box2 {
+				border-width: 1px 2px 3px 4px;
+				border-style: dotted;}
+		.box3 { border-style: dashed;}
+		
+	</style>
+</head>
+<body>
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<div class="box3"></div>
+</body>
+</html>

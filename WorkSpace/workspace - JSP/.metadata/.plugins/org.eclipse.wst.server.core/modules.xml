@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<modules>
+  <module moduleId="org.eclipse.jst.jee.server:EZEN_Board" serverId="Model1"/>
+  <module moduleId="org.eclipse.jst.jee.server:jejurent" serverId="Model1"/>
+  <module moduleId="org.eclipse.jst.jee.server:chap01_FirstJSP" serverId="JSP_Model1"/>
+  <module moduleId="org.eclipse.jst.jee.server:chap02_Servlet" serverId="JSP_Model1"/>
+  <module moduleId="org.eclipse.jst.jee.server:programming" serverId="Model1"/>
+</modules>

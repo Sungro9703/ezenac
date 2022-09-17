@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>validation</title>
+	<style type="text/css">
+    	th {
+    		text-align: left;
+    	}
+    
+    	input::-webkit-outer-spin-button,
+    	input::-webkit-inner-spin-button {
+    		-webkit-appearance: none;
+    		margin:0;
+    	}
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		
+		function check() {
+			//id 공백 확인
+			if($("#id").val() == ""){
+				alert("아이디를 입력해주세요.");
+				$("#id").focus();
+				return false;
+			}
+			
+			//pw 공백 확인
+			if($("#pw").val() == ""){
+				alert("비밀번호를 입력해주세요.");
+				$("#pw").focus();
+				return false;
+			}
+			
+			//pwcheck 공백 확인
+			if($("#pwcheck").val() == ""){
+				alert("비밀번호 확인을 입력해주세요.");
+				$("#pwcheck").focus();
+				return false;
+			}
+			
+			//name 공백 확인
+			if($("#name").val() == ""){
+				alert("사용자 이름을 입력해주세요.");
+				$("#name").focus();
+				return false;
+			}
+			
+			//birth 공백 확인
+			if($("#birth").val() == ""){
+				alert("생년월일을 입력해주세요.");
+				$("#birth").focus();
+				return false;
+			}
+			
+			//성별 체크 확인
+			var gender = $("#gender");
+			
+			if($(":radio[name='gender']:checked").length < 1) {
+				alert("성별을 체크해주세요.");
+				return false;
+			}
+			
+			
+			//email 공백 확인
+			if($("#email").val() == ""){
+				alert("이메일을 입력해주세요.");
+				$("#email").focus();
+				return false;
+			}
+			
+			//address 공백 확인
+			if($("#address").val() == ""){
+				alert("주소를 입력해주세요.");
+				$("#address").focus();
+				return false;
+			}
+			
+			//tel1 공백 확인
+			if($("#tel1").val() == ""){
+				alert("사용자 연락처1을 입력해주세요.");
+				$("#tel1").focus();
+				return false;
+			}
+		}
+	
+	</script>
+</head>
+<body>
+	<form action="#" onsubmit="return check()">
+        <table border="1" width="700px">
+            <tr>
+                <th>사용자ID</th>
+                <td><input type="text" id="id" /></td>
+            </tr>
+            <tr>
+                <th>비밀번호</th>
+                <td><input type="password" id="pw" /></td>
+            </tr>
+            <tr>
+                <th>비밀번호 확인</th>
+                <td><input type="password" id="pwcheck" /></td>
+            </tr>
+            <tr>
+                <th>사용자 이름</th>
+                <td><input type="text" id="name" /></td>
+            </tr>
+            <tr>
+                <th>*생년월일</th>
+                <td><input type="number" id="birth" /></td>
+            </tr>
+            <tr>
+                <th>*성별</th>
+                <td>남자 : <input type="radio" name="gender" /> 여자<input type="radio" name="gender" /></td>
+            </tr>
+            <tr>
+                <th>*사용자 이메일</th>
+                <td><input type="email" id="email" /></td>
+            </tr>
+            <tr>
+                <th>*사용자 주소</th>
+                <td><input type="text" id="address" /></td>
+            </tr>
+            <tr>
+                <th>*사용자 연락처1</th>
+                <td><input type="number" id="tel1" /></td>
+            </tr>
+            <tr>
+                <th>*사용자 연락처2</th>
+                <td><input type="number" id="tel2" /></td>
+            </tr>
+            <tr align="center">
+                <td colspan="2">
+                    <button type="submit" id="submit">가입완료</button>
+                    <button type="reset">다시 입력</button>
+                    <button type="button" onclick="window.open('','_self').close()">가입 안함</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	String userid = request.getParameter("userid");
+	String password = request.getParameter("password");
+	
+	if (userid.equals(password)) {
+		session.setAttribute("userid", userid);
+	}
+		
+		//로그인 성공 여부 처리
+		if(userid.equals(password)) {
+			//로그인 성공
+			session.setAttribute("userid", userid);
+			session.setAttribute("password", password);
+			response.sendRedirect("loginForm.jsp");
+		}
+		else {
+			// 로그인 실패
+			request.setAttribute("loginErrMsg", "로그인 오류입니다.");
+			request.getRequestDispatcher("loginForm.jsp").forward(request, response);
+		}
+%>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>배치</title>
+	<style type="text/css">
+		.parent-box{
+			background-color: aqua;
+			width: 200px;
+			height: 200px;
+			position: relative;		/* 기준 */
+		}
+		.child-box{
+			background-color: blueviolet;
+			width: 150px;
+			height: 150px;
+			position: absolute;		/* 위치 상 부모 요소를 기준으로 배치 */
+			top: 50px;
+			right: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div class="parent-box">
+		<div class="child-box"></div>
+	</div>
+</body>
+</html>

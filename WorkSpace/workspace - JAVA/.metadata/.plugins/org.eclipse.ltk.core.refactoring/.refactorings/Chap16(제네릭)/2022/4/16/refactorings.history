@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Water.java&apos; to &apos;Chap16(제네릭)/src/kr.co.ezenac.generic2&apos;&#x0D;&#x0A;- Original project: &apos;Chap16(제네릭)&apos;&#x0D;&#x0A;- Destination element: &apos;Chap16(제네릭)/src/kr.co.ezenac.generic2&apos;&#x0D;&#x0A;- Original element: &apos;kr.co.ezenac.generic.Water.java&apos;" description="Copy compilation unit" destination="/src&lt;kr.co.ezenac.generic2" element1="/src&lt;kr.co.ezenac.generic{Water.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1649641435001" units="1" version="1.0"/>
+</session>

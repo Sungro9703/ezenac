@@ -1,0 +1,6 @@
+127.0.0.1 - - [15/Jun/2022:22:29:33 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [15/Jun/2022:22:29:34 +0900] "GET /chap13_JSTL/member/memberAction.jsp HTTP/1.1" 500 2591
+0:0:0:0:0:0:0:1 - - [15/Jun/2022:22:29:34 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [15/Jun/2022:22:29:45 +0900] "GET /chap13_JSTL/member/memberForm.jsp HTTP/1.1" 200 1206
+0:0:0:0:0:0:0:1 - - [15/Jun/2022:22:29:47 +0900] "GET /chap13_JSTL/member/memberAction.jsp?id=&pwd=&name=&email= HTTP/1.1" 500 2591
+0:0:0:0:0:0:0:1 - - [15/Jun/2022:22:29:51 +0900] "GET /chap13_JSTL/member/memberAction.jsp?id=123&pwd=123&name=123&email=123 HTTP/1.1" 500 2591

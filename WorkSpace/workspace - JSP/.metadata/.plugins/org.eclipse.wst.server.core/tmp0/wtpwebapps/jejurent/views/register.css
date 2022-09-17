@@ -1,0 +1,179 @@
+@charset "UTF-8";
+
+/* header css */
+
+#topMenu {
+	width: 100%;
+	background-color: #f9f9f9;
+	border-bottom: #ddd 1px solid;
+	display: flex;
+	justify-content: space-between;
+}
+
+#topMenu #top_left {
+	list-style: none;
+}
+
+#topMenu #top_left li{
+	float: left;
+	padding: 0 7px;
+}
+
+#topMenu #top_right {
+	list-style: none;
+}
+
+#topMenu #top_right li{
+	float: right;
+	border-right: 1px solid gray;
+	padding: 0 7px;
+}
+
+
+#hd_wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+#hd_wrapper #hd_left{
+	padding-top: 50px;
+}
+
+#hd_wrapper #hd_right{
+	padding-top: 50px;
+}
+
+
+#top_list nav{
+	background-color: #4B7432;
+	display: flex;
+	justify-content: space-between;
+}
+
+#top_list #ul1 li{
+	list-style: none;
+	float: left;
+	padding: 0 7px;
+	border-right: 1px solid gray;
+	color: white;
+}
+
+#top_list #ul2 li{
+	list-style: none;
+	float: right;
+	padding: 0 7px;
+	border-right: 1px solid gray;
+	color: white;
+}
+
+
+/* wrapper */
+#wrapper {
+	margin: 20px auto;
+	width: 1000px;
+}
+
+#title {
+	font-weight: bold;
+	margin-bottom: 15px;
+	font-size: 20px;
+}
+
+#wrapper caption {
+	padding: 10px 0;
+	font-weight: bold;
+	text-align: left;
+	border-bottom: 2px solid #000;
+}
+
+#wrapper table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#wrapper th {
+	background: f8f8f8;
+	text-align: left;
+	padding: 10px;
+}
+
+#wrapper table, th, tr {
+	border: solid 1px #dde3e6;
+}
+
+table input {
+	background: f7f7f7;
+}
+
+
+.btn_confirm {
+	margin: 30px auto;
+	text-align: center;
+}
+
+.btn_confirm input {
+	width: 120px;
+	padding: 13px 0;
+	font-size: 1.09em;
+	font-weight: bold;
+	border-radius: 5px;
+}
+
+.btn_confirm #btn_submit {
+	background-color: #86bf62;
+	color: #fff;
+	border: none;
+}
+
+.btn_confirm #btn_cancle {
+	background-color: #fff;
+	border: 1px solid #86bf62;
+	color: #86bf62;
+}
+
+
+/* footer */
+
+footer {
+	background: #f8f8f8;
+}
+
+.foot_menu {
+	border-top: 1px solid #dde3e6;
+}
+
+.foot_menu ul {
+	list-style: none;
+	text-align: center;
+	padding: 15px 0 15px;
+	border-bottom: 1px solid #dde3e6;
+}
+
+.foot_menu ul li{
+	display: inline-block;
+	margin: 0 20px 0 0;
+	font-size: 0.867em;
+	font-weight: bold;
+}
+
+.foot_info {
+	margin: 0;
+	padding: 0;
+	line-height: 1.5em;
+	color: #555;
+	text-align: center;
+}
+
+.foot_info span {
+	font-size: 10px;
+}
+
+.foot_info b {
+	margin: 0 5px 0 0;
+}
+
+.foot_info #copy {
+	margin-top: 15px;
+	color: #999;
+} 

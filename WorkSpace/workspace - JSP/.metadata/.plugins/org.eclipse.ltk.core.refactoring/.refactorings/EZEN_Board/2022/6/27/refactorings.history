@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;EZEN_Board/src/main/webapp/board&apos; to &apos;userBoard&apos;" description="Rename resource &apos;board&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/board" name="userBoard" stamp="1656413080433" updateReferences="true"/>
+</session>

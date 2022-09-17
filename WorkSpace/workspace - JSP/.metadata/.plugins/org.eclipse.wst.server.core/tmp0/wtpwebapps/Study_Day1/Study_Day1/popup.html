@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>popup</title>
+	<script type="text/javascript">
+
+	
+		function google() {
+			window.open("http://google.com")
+		}
+		
+		function android() {
+			window.open("http://android.com")
+		}
+		
+		function apple() {
+			window.open("http://apple.com")
+		}
+		
+		
+		
+	</script>
+</head>
+<body>
+	<form>
+        <fieldset>
+            <legend>원하는 사이트를 선택하세요.</legend>
+                <ul>
+                    <li><input type="radio" onclick="return google()" />구글</li>
+                    <li><input type="radio" onclick="return android()" />안드로이드</li>
+                    <li><input type="radio" onclick="return apple()" />애플</li>
+                </ul>
+        </fieldset>
+    </form>
+</body>
+</html>

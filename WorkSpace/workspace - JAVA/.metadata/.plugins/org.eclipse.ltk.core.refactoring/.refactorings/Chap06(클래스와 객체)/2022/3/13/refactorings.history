@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;kr.co.ezenac.field.member&apos; to &apos;kr.co.ezenac.member&apos;&#x0D;&#x0A;- Original project: &apos;Chap06(클래스와 객체)&apos;&#x0D;&#x0A;- Original element: &apos;Chap06(클래스와 객체)/src/kr.co.ezenac.field.member&apos;&#x0D;&#x0A;- Renamed element: &apos;Chap06(클래스와 객체)/src/kr.co.ezenac.member&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;kr.co.ezenac.field.member&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;kr.co.ezenac.field.member" name="kr.co.ezenac.member" qualified="false" references="true" stamp="1648020147807" textual="false" version="1.0"/>
+</session>

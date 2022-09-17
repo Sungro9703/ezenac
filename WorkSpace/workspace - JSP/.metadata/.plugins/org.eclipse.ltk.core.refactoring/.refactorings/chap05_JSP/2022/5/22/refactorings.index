@@ -1,0 +1,5 @@
+1653464448456	Move 'builtInObject' to 'webapp'
+1653464452101	Move 2 resources to 'builtInObject'
+1653547247348	Move 'error500.jsp' to 'builtInObject'
+1653614701156	Move 'pageContext.jsp' to 'scope'
+1653615582855	Rename resource 'pageContext.jsp'

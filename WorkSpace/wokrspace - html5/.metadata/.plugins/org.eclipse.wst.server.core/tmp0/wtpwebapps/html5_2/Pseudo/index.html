@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>가상 선택자</title>
+	<style type="text/css">
+		.fruits span:first-child {
+			color: red;
+		}
+		.fruits h3 last:last-child {
+			color: blue;
+		}
+		.fruits *:nth-child(2n) {		/* 짝수번째 요소들만 선택 */
+			color: aqua;
+		}
+		.fruits *:nth-child(2n+1) {		
+			color: yellow;
+		}
+		.fruits *:nth-child(n+2) {		
+			color: black;
+		}
+		.fruits2 li:first-child {
+			color: orange;
+		}
+		.fruits2 li:last-child {
+			color: green;
+		}
+		.fruits2 li:nth-child(2) {
+			color: purple;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="fruits">
+		<span>딸기</span>
+		<span>수박</span>
+		<div>오렌지</div>
+		<p>망고</p>
+		<h3>사과</h3>
+	</div>
+	<ul class="fruits2">
+		<li>딸기</li>
+		<li>사과</li>
+		<li>오렌지</li>
+		<li>망고</li>
+	</ul>
+</body>
+</html>

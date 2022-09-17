@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+#wholeContainer {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.side {
+	width: 20%;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.boardWrite {
+	display: flex;
+	justify-content: center;
+}
+
+.writeTable, tr, td {
+	border: 1px solid black;
+}
+
+
+.writeTable {
+	width: 100%;
+}
+
+.boardContent {
+	height: 500px;
+	width: 100%;
+}
+
+#toList {
+	width: 10%;
+}
+
+.replySpan {
+	display: flex;
+	justify-content: space-between;
+}

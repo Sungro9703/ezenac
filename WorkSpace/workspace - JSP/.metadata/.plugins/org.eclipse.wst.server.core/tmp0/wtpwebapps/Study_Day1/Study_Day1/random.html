@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>random</title>
+	<script type="text/javascript">
+		function random() {
+			var ran = Math.random();
+			var box = document.getElementById("box");
+			box.value = Math.floor(ran * 20 + 1);
+		}
+	</script>
+	
+</head>
+<body>
+	<form>
+        <fieldset>
+            <legend>1~20까지 숫자 중 랜덤으로 생성하시오</legend>
+                출력:
+                <input type="text" id="box" readonly />
+                <button type="button" onclick="random()">생성</button>
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/mvc-config" deployDir="wtpwebapps" hostname="localhost" id="mvc" name="mvc" runtime-id="Apache Tomcat v9.0" server-type="org.eclipse.jst.server.tomcat.90" server-type-id="org.eclipse.jst.server.tomcat.90" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="20">
+    <list key="modules" value0="ezen03_AOP::org.eclipse.jst.jee.server:ezen03_AOP::jst.web::2.5" value1="ezenStore::org.eclipse.jst.jee.server:ezenStore::jst.web::2.5" value2="Teamplay_pre::org.eclipse.jst.jee.server:Teamplay_pre::jst.web::4.0" value3="LentCarProject::org.eclipse.jst.jee.server:LentCarProject::jst.web::2.5"/>
+  </server>
+</servers>

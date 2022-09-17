@@ -1,0 +1,3 @@
+127.0.0.1 - - [29/Jun/2022:13:04:17 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [29/Jun/2022:13:04:18 +0900] "GET /ezenac/WEB-INF/classes/kr/co/ezenaop/LoggindAdvice.java HTTP/1.1" 404 721
+0:0:0:0:0:0:0:1 - - [29/Jun/2022:13:04:18 +0900] "GET /favicon.ico HTTP/1.1" 404 818

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;kr.co.ezenac.array.MyArray&apos; to &apos;MyArrayList&apos;&#x0D;&#x0A;- Original project: &apos;Chap14(자료구조)&apos;&#x0D;&#x0A;- Original element: &apos;kr.co.ezenac.array.MyArray&apos;&#x0D;&#x0A;- Renamed element: &apos;kr.co.ezenac.array.MyArrayList&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;MyArray&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;kr.co.ezenac.array{MyArray.java[MyArray" matchStrategy="1" name="MyArrayList" qualified="false" references="true" similarDeclarations="false" stamp="1649293763454" textual="false" version="1.0"/>
+</session>

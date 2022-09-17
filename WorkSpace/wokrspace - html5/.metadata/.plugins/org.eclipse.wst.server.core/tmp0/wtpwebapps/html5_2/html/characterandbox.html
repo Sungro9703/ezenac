@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">									<!-- 문서 전체 범위 -->
+<head>												<!-- 문서의 정보를 나타내는 범위 -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>글자와 상자</title>
+	<style type="text/css">
+		span {	color: red;}
+	</style>
+	<script type="text/javascript"> 
+		console.log('Hello JS!')
+	</script>
+</head>
+<body>												<!-- 문서의 구조를 나타내는 범위 -->
+	<span style="width: 100px;">Hello</span>		<!-- 대표적인 인라인요소, 요소가 수평으로 쌓임 -->
+	<span style="height: 100px;">World</span> Beautiful Day!
+	<br />
+	<span style="margin: 20px;">Hello</span>		<!-- 요소의 외부 여백 지정 -->
+	<span style="padding: 20px;">Ezen</span>		<!-- 요소의 내부 여백 지정 -->
+	<span><span></span></span>						<!-- 인라인 요소 안에 블록 요소 사용불가 -->
+	<div style="width: 100px;">Hello</div>			<!-- 대표적인 블록요소, 요소가 수직으로 쌓임 -->
+	<div style="height: 40px;">Ezenac</div>			<!-- 요소의 가로, 세로 너비 지정 -->		
+
+	<div style="margin: 10px;">Hello</div>
+	<div style="padding: 10px;">EzenIT</div>
+	
+	<div><div></div></div>							<!-- 블록 요소 안에 블록, 인라인 요소 사용 가능 -->
+	<div><span></span></div>
+</body>
+</html>

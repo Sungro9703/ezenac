@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;JsFunction.java&apos; to &apos;chap15_BoardModel2/src/main/java/kr.co.ezenac.model2.util&apos;&#x0D;&#x0A;- Original project: &apos;chap11_BoardModel1&apos;&#x0D;&#x0A;- Destination element: &apos;chap15_BoardModel2/src/main/java/kr.co.ezenac.model2.util&apos;&#x0D;&#x0A;- Original element: &apos;kr.co.ezenac.model1.utils.JsFunction.java&apos;" description="Copy compilation unit" destination="=chap15_BoardModel2/src\/main\/java&lt;kr.co.ezenac.model2.util" element1="/src\/main\/java&lt;kr.co.ezenac.model1.utils{JsFunction.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1655861413368" units="1" version="1.0"/>
+</session>

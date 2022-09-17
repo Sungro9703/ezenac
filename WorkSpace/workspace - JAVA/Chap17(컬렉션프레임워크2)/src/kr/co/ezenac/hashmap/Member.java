@@ -1,0 +1,56 @@
+package kr.co.ezenac.hashmap;
+
+public class Member {
+	
+	private int memberId;
+	private String memberName;
+	
+	public Member() {}
+
+	public Member(int memberId, String memberName) {
+//		super();
+		this.memberId = memberId;
+		this.memberName = memberName;
+	}
+
+	public int getMemberId() {
+		return memberId;
+	}
+
+	public void setMemberId(int memberID) {
+		this.memberId = memberID;
+	}
+
+	public String getMemberName() {
+		return memberName;
+	}
+
+	public void setMemberName(String memberName) {
+		this.memberName = memberName;
+	}
+	
+	@Override
+	public String toString() {
+		return memberName + " 회원님의 아이디는 " + memberId + "입니다.";
+	}
+	
+	@Override
+	public int hashCode() {
+		System.out.println("hashCode() 호출");
+		return memberId;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		
+		if(obj instanceof Member) {
+			Member member = (Member)obj;
+			return this.memberId == member.memberId;
+		}
+		return false;
+	}
+	
+	
+	
+	
+}

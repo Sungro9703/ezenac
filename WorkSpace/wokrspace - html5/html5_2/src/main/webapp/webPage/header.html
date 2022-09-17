@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>상단 헤더</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		li { list-style-type: none;}
+		header{
+			height: 166px;
+			/* border: solid 1px red; */
+		}
+		.box {
+			width: 1100px;
+			margin: 0 auto;
+			/* border: solid 1px red; */
+		}
+		#logo {
+			float: left;
+			margin: 80px 0 0 60px;
+			/* border: solid 1px red; */
+		}
+		#menu {
+			float: right;
+			text-align: right;
+			margin-right: 20px;
+			/* border: solid 1px red; */
+		}
+		#menu li {
+			display: inline-block;
+			/* border: solid 1px red; */
+		}
+		#top_menu li{
+			margin: 30px 0 0 10px;
+			/* border: solid 1px red; */
+		}
+		#main_menu li {
+			margin: 50px 0 0 80px;
+			font-family: "맑은고딕";
+			font-weight: bold;
+			font-size: 20px;
+			border: solid 1px red;
+		}
+		
+	</style>
+</head>
+<body>
+	<header>
+		<div id="box">
+			<div id="logo">
+				<img alt="로고" src="img/logo.png">
+			</div>
+			<nav id="menu">
+				<ul id="top_menu">
+					<li>이순신(sjLee)님</li><li>|</li>
+					<li>로그아웃</li><li>|</li>
+					<li>정보수정</li>
+				</ul>
+				<ul id="main_menu">
+					<li>Home</li>
+					<li>출석부</li>
+					<li>작품갤러리</li>
+					<li>게시판</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+</body>
+</html>

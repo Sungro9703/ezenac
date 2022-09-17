@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;Chap10(컬렉션프레임워크1)/src/kr.co.ezenac.arraylist3&apos;&#x0D;&#x0A;- Original project: &apos;Chap07(클래스와 객체2)&apos;&#x0D;&#x0A;- Destination element: &apos;Chap10(컬렉션프레임워크1)/src/kr.co.ezenac.arraylist3&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     kr.co.ezenac.reference.Student.java&#x0D;&#x0A;     kr.co.ezenac.reference.Subject.java" description="Copy compilation units" destination="=Chap10\(컬렉션프레임워크1)/src&lt;kr.co.ezenac.arraylist3" element1="/src&lt;kr.co.ezenac.reference{Student.java" element2="/src&lt;kr.co.ezenac.reference{Subject.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1648698608362" units="2" version="1.0"/>
+</session>
